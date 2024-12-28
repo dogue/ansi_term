@@ -1,4 +1,4 @@
-package terminal
+package ansi_term
 
 import "core:fmt"
 
