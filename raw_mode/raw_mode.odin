@@ -60,12 +60,3 @@ get_term_size :: proc(allocator := context.allocator) -> (rows: int, cols: int, 
     return
 }
 
-enter_alt_buffer :: proc() -> Error {
-    os.write_string(os.stdout, "\x1b[?1049h") or_return
-    return nil
-}
-
-exit_alt_buffer :: proc() -> Error {
-    os.write_string(os.stdout, "\x1b[?1049l") or_return
-    return nil
-}
