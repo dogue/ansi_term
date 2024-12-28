@@ -3,7 +3,7 @@
 ANSI terminal utilities for Odin.
 
 ### `ansi_term`
-Basic ANSI escape sequences for styling terminal output:
+Basic ANSI escape sequences for canonical mode manipulation:
 - Text styling (bold, italic, etc.)
 - Foreground/background colors (4-bit, 8-bit, RGB)
 - Entering/exiting the alternate buffer
