@@ -2,8 +2,6 @@
 
 ANSI terminal utilities for Odin.
 
-## Packages
-
 ### ansi_term
 Basic ANSI escape sequences for styling terminal output:
 - Text styling (bold, italic, etc.)
