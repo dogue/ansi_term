@@ -12,3 +12,12 @@ exit_alt_buffer :: proc() -> (err: os.Error) {
     return
 }
 
+screen_save :: proc() -> (err: os.Error) {
+    _, err = os.write_string(os.stdout, "\x1b[?47h")
+    return
+}
+
+screen_restore :: proc() -> (err: os.Error) {
+    _, err = os.write_string(os.stdout, "\x1b[?47l")
+    return
+}
