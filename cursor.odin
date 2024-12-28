@@ -29,7 +29,7 @@ cursor_down_by :: proc(n: int) -> (err: os.Error) {
     arena: vmem.Arena
     alloc := vmem.arena_allocator(&arena)
 
-    code := fmt.aprintf("\x1b[%dB", allocator = alloc)
+    code := fmt.aprintf("\x1b[%dB", n, allocator = alloc)
     _, err = os.write_string(os.stdout, code)
     return
 }
@@ -39,7 +39,7 @@ cursor_right_by :: proc(n: int) -> (err: os.Error) {
     arena: vmem.Arena
     alloc := vmem.arena_allocator(&arena)
 
-    code := fmt.aprintf("\x1b[%dC", allocator = alloc)
+    code := fmt.aprintf("\x1b[%dC", n, allocator = alloc)
     _, err = os.write_string(os.stdout, code)
     return
 }
@@ -49,7 +49,7 @@ cursor_left_by :: proc(n: int) -> (err: os.Error) {
     arena: vmem.Arena
     alloc := vmem.arena_allocator(&arena)
 
-    code := fmt.aprintf("\x1b[%dD", allocator = alloc)
+    code := fmt.aprintf("\x1b[%dD", n, allocator = alloc)
     _, err = os.write_string(os.stdout, code)
     return
 }
@@ -59,7 +59,7 @@ cursor_return_down_by :: proc(n: int) -> (err: os.Error) {
     arena: vmem.Arena
     alloc := vmem.arena_allocator(&arena)
 
-    code := fmt.aprintf("\x1b[%dE", allocator = alloc)
+    code := fmt.aprintf("\x1b[%dE", n, allocator = alloc)
     _, err = os.write_string(os.stdout, code)
     return
 }
@@ -69,7 +69,7 @@ cursor_return_up_by :: proc(n: int) -> (err: os.Error) {
     arena: vmem.Arena
     alloc := vmem.arena_allocator(&arena)
 
-    code := fmt.aprintf("\x1b[%dF", allocator = alloc)
+    code := fmt.aprintf("\x1b[%dF", n, allocator = alloc)
     _, err = os.write_string(os.stdout, code)
     return
 }
@@ -78,7 +78,7 @@ cursor_to_col :: proc(n: int) -> (err: os.Error) {
     arena: vmem.Arena
     alloc := vmem.arena_allocator(&arena)
 
-    code := fmt.aprintf("\x1b[%dG", allocator = alloc)
+    code := fmt.aprintf("\x1b[%dG", n, allocator = alloc)
     _, err = os.write_string(os.stdout, code)
     return
 }
